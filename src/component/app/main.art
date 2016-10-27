@@ -1,0 +1,15 @@
+<div>
+  {{ if this.state.admin === true }}
+    <p onClick={{this.handleClick}}>Hello Admin</p>
+  {{ else }}
+    <p>Hello User</p>
+  {{ /if }}
+  <ul>
+    {{ each this.state.list as value i }}
+      <li>{{i}}. {{value}}</li>
+    {{ /each }}
+  </ul>
+  {{ if this.props.msg }}
+    <p>{{this.props.msg}}</p>
+  {{ /if }}
+</div>
